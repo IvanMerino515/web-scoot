@@ -29,3 +29,24 @@ margin-bottom: 0;
 body{
 margin: 0;
 }
+
+:root {
+    --yellow: #fcb72b;
+    --light-yellow: #fff4df;
+    --blue: #495567;
+    --dark-grey: #939caa;
+    --light-grey: #e5ecf4;
+    --snow: #f2f5f9;
+    
+    --space-mono: 'Space mono', monospace;
+    --lexend-deca: 'Lexend deca', 'sans-serif';
+    
+    --title-m: 24px;
+    --title-l: 40px;
+    --title-xl: 48px;
+    --title-xxl: 56px;
+    
+    --line-height-m: 28px;
+    --line-height-l: 48px;
+    --line-height-xl: 56px;
+    }
