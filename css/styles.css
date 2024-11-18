@@ -26,6 +26,8 @@ margin-bottom: 0;
 
 }
 
+
+
 body{
 margin: 0;
 width: 100%;
@@ -82,16 +84,22 @@ height: 603px;
 width: 256px;
 background-color: var(--blue);
 position: absolute;
-margin-top: 665px;
-margin-left: -32px;
-padding-left: 32px;
-padding-top: 64px;
+top: 65px;
+left: -256px;
 gap: 24px;
-display: none;
+transition: left 0.3s ease-in-out;
+z-index: 1000;
+padding: 32px;
 }
 
-.menu-desktop{
-display: none;}
+/* Clase para mostrar el menú */
+#menu.active {
+    left: 0; /* Desliza el menú hacia dentro */
+}
+
+.burger{
+z-index: 1100;
+}
 
 .item-menu{
 font-family: "Space Mono";
@@ -101,9 +109,6 @@ line-height: 25px;
 color: #e5ecf4;
 }
 
-.item-menu-desktop{
-    display: none;
-}
 
 .button-menu{
 position: absolute;
@@ -117,22 +122,47 @@ padding: 14px;
 }
 
 
-
-@media screen and (width > 400px){
-
-    .header{
-        height: 96px;  
+/* HEADER EN DESKTOP */
+@media screen and (Width > 768px) {
+    .burger {
+        display: none; /* Oculta el botón de hamburguesa */
     }
 
-    .burger{
-        display: none;    
+    .menu {
+        display: flex; /* Muestra el menú en línea */
+        flex-direction: row; /* Elementos en línea */
+        position: static; /* Elimina la posición absoluta o fixed */
+        top: auto;
+        left: auto;
+        height: auto;
+        width: auto;
+        background-color: transparent; /* Fondo transparente para integrarse en el header */
+        gap: 32px; /* Espaciado entre los elementos */
+        margin-left: auto; /* Alinea el menú a la derecha */
+        padding: 0; /* Elimina cualquier padding innecesario */
+        z-index: auto; /* No es necesario un z-index alto */
     }
-    
-    
-    .menu{
-    display: none;
+
+    .item-menu {
+        font-family: "Space Mono";
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        font-weight: 700;
+        margin-top: 20px;
+        line-height: normal;
+        font-size: 20px;
+        color: var(--blue); /* Cambia el color según el diseño */
+        z-index: 1000;
     }
-    }  
+
+    .button-menu {
+        position: static; /* Asegura que el botón se posicione correctamente */
+        background-color: var(--yellow);
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: white;
+        text-align: center;
+    }
+}
     
 
 
@@ -150,6 +180,7 @@ background-repeat: no-repeat;
 background-size: 100%;
 padding: 70px 32px 179px 32px;
 gap: 20px;
+z-index: 900;
 }
 
 .title{
@@ -252,8 +283,12 @@ justify-content: center;
 }
 
 @media screen and (width > 400px){
-
-}  
+.section-icons{
+display: grid;
+grid-row: 2;
+grid-template-columns: 2 ;
+}
+} 
     
 
 
@@ -325,6 +360,7 @@ font-weight: 700;
 
 .sign-up-section{
 display: flex;
+width: 100%;
 flex-direction: column;    
 background-color: var(--blue);
 position: relative;
