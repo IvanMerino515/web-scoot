@@ -136,6 +136,8 @@ padding: 14px;
         left: auto;
         height: auto;
         width: auto;
+        justify-content: center;
+        align-content: center;
         background-color: transparent; /* Fondo transparente para integrarse en el header */
         gap: 32px; /* Espaciado entre los elementos */
         margin-left: auto; /* Alinea el menú a la derecha */
@@ -145,18 +147,21 @@ padding: 14px;
 
     .item-menu {
         font-family: "Space Mono";
-        font-size: 16px; /* Ajusta el tamaño del texto */
-        font-weight: 700;
-        margin-top: 20px;
+        font-size: 15px; /* Ajusta el tamaño del texto */
+        font-weight: 400;
+        margin-top: 30px;
         line-height: normal;
         font-size: 20px;
         color: var(--blue); /* Cambia el color según el diseño */
         z-index: 1000;
+        cursor: pointer;
     }
 
     .button-menu {
         position: static; /* Asegura que el botón se posicione correctamente */
         background-color: var(--yellow);
+        display: flex;
+        margin-top: 10px;
         padding: 10px 20px;
         border-radius: 4px;
         color: white;
@@ -222,7 +227,7 @@ margin-top: 412px;
 display: none;
 }
 
-@media screen and (width > 400px){
+@media screen and (width > 768px){
 .hero-section{
     background-image: url(../assets/images/home-hero-desktop.jpg);
     align-items: flex-start;
