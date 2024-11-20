@@ -395,6 +395,7 @@ font-weight: 700;
     .bubble-section{
     display: flex;
     flex-direction: row;
+    font: 1em sans-serif;                                           
     padding-left: 165px;
     padding-right:165px;                     }
 }
